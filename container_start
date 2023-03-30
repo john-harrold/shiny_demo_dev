@@ -1,0 +1,6 @@
+#docker build -t shiny --no-cache  https://raw.githubusercontent.com/john-harrold/ruminate/main/inst/docker/local_container
+docker build -t shiny_dev --no-cache . 
+docker run --name shiny_dev --rm -p 3838:3838 shiny_dev &
+
+
+#docker exec -it shiny_dev bash

@@ -1,0 +1,2 @@
+docker container stop shiny_dev 
+#docker rm  shiny_dev
