@@ -1,5 +1,9 @@
 FROM rocker/shiny-verse:4.2.0
 
+
+RUN apt-get update && apt-get install -y \
+    vim
+
 ## Install R libraries
 RUN R -e "install.packages('remotes',      repos='http://cran.rstudio.com/')"
 RUN R -e "install.packages('rstudioapi',   repos='http://cran.rstudio.com/')"
@@ -35,7 +39,7 @@ WORKDIR ..
 # Cleaning up unnecessary files
 RUN rm -rf shiny_demo_dev-main
 RUN rm -rf main.zip
-RUN rm -rf build_site.R
+#RUN rm -rf build_site.R
 
 # RUN mkdir 'srv/shiny-server/ruminate'
 # RUN R -e "file.copy(system.file(package='ruminate', 'templates', 'ruminate.R'), '/srv/shiny-server/ruminate/App.R')"
