@@ -22,6 +22,7 @@ if(dir.exists("ruminate")){
 }
 dir.create("ruminate")
 file.copy(system.file(package='ruminate', 'templates', 'ruminate.R'), '/srv/shiny-server/ruminate/App.R')
+# This forces the deployed flag in the app 
 nat.utils::touch(file.path("ruminate", "DEPLOYED"))
 
 # Building formods demo
