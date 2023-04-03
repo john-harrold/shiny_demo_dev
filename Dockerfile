@@ -4,6 +4,7 @@ FROM rocker/shiny-verse:4.2.0
 RUN R -e "install.packages('remotes',      repos='http://cran.rstudio.com/')"
 RUN R -e "install.packages('rstudioapi',   repos='http://cran.rstudio.com/')"
 RUN R -e "install.packages('gridExtra',    repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('nat.utils',    repos='http://cran.rstudio.com/')"
 
 # Installing the development versions of packages
 RUN R -e "remotes::install_github('billdenney/pknca',      dependencies=TRUE)"

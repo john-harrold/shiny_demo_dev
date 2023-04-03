@@ -1,6 +1,8 @@
 # `shiny_demo_dev`
 
-Docker container to demo Shiny apps using development versions 
+Docker container to demo Shiny apps using development versions. Note that this
+container will only work on x86 (Intel or AMD) machines. So it will not work
+on the new Apple Silicon (M1, etc.) computers.
 
 ```
 docker build -t shiny --no-cache  https://raw.githubusercontent.com/john-harrold/shiny_demo_dev/main/Dockerfile

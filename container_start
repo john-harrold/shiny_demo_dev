@@ -4,4 +4,8 @@ docker build -t shiny --no-cache  https://raw.githubusercontent.com/john-harrold
 docker run --name shiny_dev --rm -p 3838:3838 shiny_dev &
 
 
+docker tag shiny_dev johnmharrold/shiny_demo_dev:latest
+docker push johnmharrold/shiny_demo_dev:latest
+
+
 #docker exec -it shiny_dev bash
